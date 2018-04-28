@@ -55,6 +55,8 @@
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
+  p.logo { max-width: 300px; min-width: 250px; }
+
   .container {
     width: 80%; }
   .column,
@@ -160,7 +162,6 @@ h6.name { margin-bottom: 0rem; }
 
 p {
   margin-top: 0; }
-p.logo { max-width: 300px; min-width: 250px; }
 
 
 /* Links
