@@ -41,6 +41,11 @@
   float: left;
   box-sizing: border-box; }
 
+@media (max-width: 550px) {
+  p.logo { text-align: center; }
+  p.menu { text-align: center; }
+}
+
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
@@ -155,7 +160,7 @@ h6.name { margin-bottom: 0rem; }
 
 p {
   margin-top: 0; }
-p.logo { max-width: 400px; min-width: 260px; }
+p.logo { max-width: 300px; min-width: 250px; }
 
 
 /* Links
