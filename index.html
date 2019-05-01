@@ -32,8 +32,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
     <link href="assets/lib/remodal/remodal.css" rel="stylesheet">
     <link href="assets/lib/remodal/remodal-default-theme.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
-    <link href="assets/lib/lightbox2/css/lightbox.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
 
     <meta name="google-site-verification" content="P9fGHxK_BGQWkK_IPlR-rO3WMIvp2O9jSynrTYjgpPY" />
@@ -48,14 +46,9 @@
     <!--===============================================-->
     <nav class="fancynavbar" data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-48},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}'
       data-zanim-trigger="scroll" data-exclusive="true">
-      <div class="fancynavbar-togglerbar" data-onscroll-fade-in="true">
+      <div class="fancynavbar-togglerbar" data-onscroll-fade-in="data-onscroll-fade-in">
         <a class="fancynavbar-brand" href="index.html">
-          <span class='fab fa-superpowers fs-3'></span>
-          <!--<img class="fancynavbar-brand-img" src="assets/img/logo-sparrow-invert.svg" alt="" width="30" height="30" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll"
-          />-->
-
-          <!--You can use icon or text logo as well-->
-          <!--<span class='fab fa-superpowers fs-3'></span>-->
+          <span class='fas fa-barcode fs-3'></span>
           <!--<span class='logo-sparrow'>S</span>--></a>
         <div class="fancynavbar-toggler">
           <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}' data-zanim-trigger="scroll">
@@ -85,7 +78,7 @@
             <a class="fancynav-link" href="./articles.html"><span class="fancynav-link-content">ARTICLES</span></a>
           </li>
           <li class="fancynav-item">
-            <a class="fancynav-link" href="mailto:sakuma.hiroshi@is.sys.es.osaka-u.ac.jp"><span class="fancynav-link-content">CONTACT</span></a>
+            <a class="fancynav-link" href="./contact.html"><span class="fancynav-link-content">CONTACT</span></a>
           </li>
         </ul>
       </div>
@@ -99,7 +92,7 @@
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
-    <main class="main minh-100vh" id="top">
+    <main class="main min-vh-100" id="top">
 
 
       <!-- ============================================-->
@@ -121,33 +114,30 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-0" id="portfolio">
+      <section class="py-0" id="top">
 
         <div class="container-fluid">
-          <div class="row h-full align-items-center border-bottom border-300">
-            <div class="col-lg-6 px-0 order-lg-2">
-              <div class="sticky-top h-lg-100vh py-9">
+          <div class="row">
+            <div class="col-lg-5 px-0 order-lg-2">
+              <div class="sticky-top vh-100 py-9">
                 <div class="bg-holder" style="background-image:url(assets/img/hiroshisakuma.jpg);" data-zanim-trigger="scroll" data-zanim-lg='{"animation":"zoom-out-slide-left","delay":0.4}'>
                 </div>
                 <!--/.bg-holder-->
 
               </div>
             </div>
-            <div class="col-lg-6 bg-white py-7 py-md-8">
-              <div class="row align-items-center justify-content-center">
-                <div class="col-lg-10 text-white text-center text-lg-left" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                  <div class="overflow-hidden">
-                    <a class="text-dark" href="./index.html"><h1 class="display-3 fs-3 fs-sm-4" data-zanim-xs='{"delay":0.2}'>Hiroshi Sakuma<br/><span class="font-weight-light">Official Website</span></h1></a>
-                  </div>
-                  <div class="overflow-hidden">
-                    <div class="d-lg-flex align-items-center font-weight-bold ls mt-3 mt-md-5 text-uppercase" data-zanim-xs='{"delay":0.4}'>
-                      <div class="overflow-hidden">
-                        <a href="https://www.facebook.com/hiroshi.skm" target="_blank"><span class="fab fa-facebook text-dark mr-1 ml-1 fs-1"></span></a>
-                        <a href="https://twitter.com/hiroshi_skm" target="_blank"><span class="fab fa-twitter text-dark mr-1 ml-1 fs-1"></span></a>
-                        <a href="https://www.instagram.com/hiroshi_skm/" target="_blank"><span class="fab fa-instagram text-dark mr-1 ml-1 fs-1"></span></a>
-                        <a href="https://linkedin.com/in/hiroshi-skm" target="_blank"><span class="fab fa-linkedin text-dark mr-1 ml-1 fs-1"></span></a>
-                      </div>
-                    </div>
+            <div class="col-lg-7 bg-white py-7">
+              <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-lg-10" data-zanim-timeline='{"delay":0.4}' data-zanim-trigger="scroll">
+                  <h1 class="font-weight-light text-uppercase fs-2 fs-sm-4 fs-lg-2 fs-xl-4">
+                    <a class="text-dark" href="./index.html"><span class="d-block overflow-hidden"><span class="d-inline-block" data-zanim-xs='{"delay":0.1}'><span class="display-4 fs-3 fs-sm-5 fs-lg-3 fs-xl-5 font-weight-black">Hiroshi Sakuma</span></span></span>
+                    <span class="d-block overflow-hidden"><span class="d-block mt-2" data-zanim-xs='{"delay":0.2}'>Official Website</span></span></a>
+                  </h1>
+                  <div data-zanim-xs='{"delay":0.4}' class="mt-3 mt-lg-4">
+                    <a href="https://www.facebook.com/hiroshi.skm" target="_blank"><span class="fab fa-facebook text-dark mr-1 ml-1 fs-1 fs-sm-2 fs-lg-1 fs-xl-2"></span></a>
+                    <a href="https://twitter.com/hiroshi_skm" target="_blank"><span class="fab fa-twitter text-dark mr-1 ml-1 fs-1 fs-sm-2 fs-lg-1 fs-xl-2"></span></a>
+                    <a href="https://www.instagram.com/hiroshi_skm/" target="_blank"><span class="fab fa-instagram text-dark mr-1 ml-1 fs-1 fs-sm-2 fs-lg-1 fs-xl-2"></span></a>
+                    <a href="https://linkedin.com/in/hiroshi-skm" target="_blank"><span class="fab fa-linkedin text-dark mr-1 ml-1 fs-1 fs-sm-2 fs-lg-1 fs-xl-2"></span></a>
                   </div>
                 </div>
               </div>
@@ -163,16 +153,16 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="pt-7 py-lg-5 py-xl-6 bg-light" id="media">
+      <section class="border-top border-300 pt-7 py-lg-5 py-xl-6 bg-light" id="media">
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-8 overflow-hidden px-5">
-              <h1 class="display-4 fs-2 fs-sm-3 fs-md-3">MEDIA</h1>
-              <p class="mt-4"><strong>2019.04.27</strong><br><a class="text-dark" href="https://www.nikkei.com/article/DGKKZO44272640W9A420C1LKB000/" target="_blank">「起業しやすい環境整備を 人工知能研究会代表 佐久間洋司氏（23）」</a>日本経済新聞</p>
-              <p class="mt-4"><strong>2019.04.19</strong><br><a class="text-dark" href="https://news.line.me/issue/oa-asahikids/6d97d197e1cb" target="_blank">「科学で変える、私たちの意識 大阪大学基礎工学部 佐久間洋司」</a>異能日記2，朝日小学生新聞</p>
-              <p class="mt-4"><strong>2019.01.23</strong><br><a class="text-dark" href="https://gendai.ismedia.jp/articles/-/59391" target="_blank">「『AIで争いのない世界をつくる』ある大学生の壮大な試み」</a>現代ビジネス</p>
-              <p class="mt-3 text-right"><strong><a class="text-dark" href="./media.html">VIEW MORE</a></strong></p>
+            <div class="col-lg-8 overflow-hidden" data-zanim-xs='{"delay":0.4}' data-zanim-trigger="scroll">
+              <h1 class="text-sans-serif display-4 fs-2 fs-sm-3 fs-lg-2 fs-xl-3 mb-5">MEDIA</h1>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.04.27</strong><br><a class="text-dark" href="https://www.nikkei.com/article/DGKKZO44272640W9A420C1LKB000/" target="_blank">「起業しやすい環境整備を 人工知能研究会代表 佐久間洋司氏（23）」</a>日本経済新聞</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.04.19</strong><br><a class="text-dark" href="https://news.line.me/issue/oa-asahikids/6d97d197e1cb" target="_blank">「科学で変える、私たちの意識 大阪大学基礎工学部 佐久間洋司」</a>異能日記2，朝日小学生新聞</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.01.23</strong><br><a class="text-dark" href="https://gendai.ismedia.jp/articles/-/59391" target="_blank">「『AIで争いのない世界をつくる』ある大学生の壮大な試み」</a>現代ビジネス</p>
+              <p class="mt-5 text-right"><a class="btn btn-outline-dark" href="./media.html">VIEW MORE</a></p>
             </div>
           </div>
         </div>
@@ -189,17 +179,17 @@
 
         <div class="container">
           <div class="row align-items-center justify-content-center">
-            <div class="col-lg-10 overflow-hidden px-5">
+            <div class="col-lg-10 overflow-hidden" data-zanim-xs='{"delay":0.4}' data-zanim-trigger="scroll">
               <div class="row">
                 <div class="col-md-5 mb-4">
-                  <img class="img-fluid" src="assets/img/profile_hiroshisakuma.jpg" alt="" />
+                  <img class="img-fluid" src="assets/img/profile_hiroshisakuma.jpg" alt="Profile" />
                 </div>
                 <div class="col-md-6 ml-auto">
-                  <h1 class="mb-4 display-4 fs-2 fs-sm-3 fs-md-3">BIOGRAPHY</h1>
-                  <h4 class="mb-3">佐久間洋司</h4>
-                  <p class="mb-3">言葉や科学を通じて人間の意識に働きかけることに興味があります。人工知能研究会 / AIR 代表、人工知能学会 学生編集委員長、世界経済フォーラム Global Shapers、孫正義育英財団 第2期生。</p>
-                  <p class="mb-4 mb-lg-4"><b>QREATOR PROFILE</b><a class="text-dark" href="http://qreators.jp/qreator/sakumahiroshi" target="_blank">「機械は人を優しくできるか？人類のハーモニーを目指す若き研究者」</a></p>
-                  <p class="mb-0 text-right"><strong><a class="text-dark" href="./biography.html">VIEW MORE</a></strong></p>
+                  <h1 class="text-sans-serif display-4 fs-2 fs-sm-3 fs-lg-2 fs-xl-3 mb-5">BIOGRAPHY</h1>
+                  <h4 class="text-sans-serif fs-1 fs-sm-2 fs-lg-1 fs-xl-2 mb-4">佐久間洋司</h4>
+                  <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mb-4">言葉や科学を通じて人間の意識に働きかけることに興味があります。人工知能研究会 / AIR 代表、人工知能学会 学生編集委員長、世界経済フォーラム Global Shapers、孫正義育英財団 第2期生。</p>
+                  <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mb-4"><b>QREATOR PROFILE</b><a class="text-dark" href="http://qreators.jp/qreator/sakumahiroshi" target="_blank">「機械は人を優しくできるか？人類のハーモニーを目指す若き研究者」</a></p>
+                  <p class="mt-5 text-right"><a class="btn btn-outline-dark" href="./biography.html">VIEW MORE</a></p>
                 </div>
               </div>
             </div>
@@ -218,12 +208,12 @@
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-8 overflow-hidden px-5">
-              <h1 class="display-4 fs-2 fs-sm-3 fs-md-3">TALKS</h1>
-              <p class="mt-4"><strong>2019.03.18</strong><br><a class="text-dark" href="http://www.osaka.cci.or.jp/event/seminar/201901/D34190318010.html" target="_blank">「ミレニアル世代から見る人工知能ブームと2025年の大阪・関西万博」</a>シンポジウム「現代の三都物語　～イノベーション創出力を競う世界の都市」，大阪商工会議所，日本経済新聞社大阪支社</p>
-              <p class="mt-4"><strong>2019.02.08</strong><br><a class="text-dark" href="https://www.kansai.meti.go.jp/2-7it/events/AI_ws-forum.html" target="_blank">「人工知能研究会 / AIR：学生と若手が主導する人工知能コミュニティの取り組み」</a>関西AIフォーラム 2019 〜関西圏のAI・データ活用人材の育成を目指して〜，近畿経済産業局，TKP大阪駅前カンファレンスセンター</p>
-              <p class="mt-4"><strong>2019.02.08</strong><br><a class="text-dark" href="https://www.kansaidoyukai.or.jp/event/第57回関西財界セミナーを開催しました/" target="_blank">第1分科会：デジタル社会における価値の変容～企業は、個人は、どう生きるか？～</a>，第57回 関西財界セミナー，国立京都国際会館</p>
-              <p class="mt-4 text-right"><strong><a class="text-dark" href="./talks.html">VIEW MORE</a></strong></p>
+            <div class="col-lg-8 overflow-hidden" data-zanim-xs='{"delay":0.4}' data-zanim-trigger="scroll">
+              <h1 class="text-sans-serif display-4 fs-2 fs-sm-3 fs-lg-2 fs-xl-3 mb-5">TALKS</h1>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.03.18</strong><br><a class="text-dark" href="http://www.osaka.cci.or.jp/event/seminar/201901/D34190318010.html" target="_blank">「ミレニアル世代から見る人工知能ブームと2025年の大阪・関西万博」</a>シンポジウム「現代の三都物語　～イノベーション創出力を競う世界の都市」，大阪商工会議所，日本経済新聞社大阪支社</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.02.08</strong><br><a class="text-dark" href="https://www.kansai.meti.go.jp/2-7it/events/AI_ws-forum.html" target="_blank">「人工知能研究会 / AIR：学生と若手が主導する人工知能コミュニティの取り組み」</a>関西AIフォーラム 2019 〜関西圏のAI・データ活用人材の育成を目指して〜，近畿経済産業局，TKP大阪駅前カンファレンスセンター</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.02.08</strong><br><a class="text-dark" href="https://www.kansaidoyukai.or.jp/event/第57回関西財界セミナーを開催しました/" target="_blank">第1分科会：デジタル社会における価値の変容～企業は、個人は、どう生きるか？～</a>，第57回 関西財界セミナー，国立京都国際会館</p>
+              <p class="mt-5 text-right"><a class="btn btn-outline-dark" href="./talks.html">VIEW MORE</a></p>
             </div>
           </div>
         </div>
@@ -240,12 +230,12 @@
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-8 overflow-hidden px-5">
-              <h1 class="display-4 fs-2 fs-sm-3 fs-md-3">ARTICLES</h1>
-              <p class="mt-4"><strong>2018.11.30</strong><br>佐久間洋司，<a class="text-dark" href="https://media.dglab.com/2018/11/30-ai_vr-01/" target="_blank">人工知能とバーチャルリアリティの接点【前編】</a>・<a class="text-dark" href="https://media.dglab.com/2018/12/01-ai_vr-02/" target="_blank">【後編】</a>，DG Lab Haus</p>
-              <p class="mt-4"><strong>2018.09.01</strong><br>佐久間洋司，<a class="text-dark" href="http://id.nii.ac.jp/1004/00009339/" target="_blank">学生フォーラム　稲見昌彦教授インタビュー「自在化身体，研究者になるということ，これからの情報処理」</a> 人工知能　33巻5号（2018年9月）</p>
-              <p class="mt-4"><strong>2018.05.01</strong><br>佐久間洋司，船橋力，<a class="text-dark" href="http://id.nii.ac.jp/1004/00009142/" target="_blank">グローバルアイ「人工知能分野における留学と官民協働の支援制度について」</a> 人工知能　33巻3号（2018年5月）</p>
-              <p class="mt-4 text-right"><strong><a class="text-dark" href="./articles.html">VIEW MORE</a></strong></p>
+            <div class="col-lg-8 overflow-hidden" data-zanim-xs='{"delay":0.4}' data-zanim-trigger="scroll">
+              <h1 class="text-sans-serif display-4 fs-2 fs-sm-3 fs-lg-2 fs-xl-3 mb-5">ARTICLES</h1>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.11.30</strong><br>佐久間洋司，<a class="text-dark" href="https://media.dglab.com/2018/11/30-ai_vr-01/" target="_blank">人工知能とバーチャルリアリティの接点【前編】</a>・<a class="text-dark" href="https://media.dglab.com/2018/12/01-ai_vr-02/" target="_blank">【後編】</a>，DG Lab Haus</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.09.01</strong><br>佐久間洋司，<a class="text-dark" href="http://id.nii.ac.jp/1004/00009339/" target="_blank">学生フォーラム　稲見昌彦教授インタビュー「自在化身体，研究者になるということ，これからの情報処理」</a> 人工知能　33巻5号（2018年9月）</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.05.01</strong><br>佐久間洋司，船橋力，<a class="text-dark" href="http://id.nii.ac.jp/1004/00009142/" target="_blank">グローバルアイ「人工知能分野における留学と官民協働の支援制度について」</a> 人工知能　33巻3号（2018年5月）</p>
+              <p class="mt-5 text-right"><a class="btn btn-outline-dark" href="./articles.html">VIEW MORE</a></p>
             </div>
           </div>
         </div>
@@ -254,7 +244,6 @@
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
-
 
     </main>
     <!-- ===============================================-->
@@ -271,11 +260,11 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-4 order-lg-2">
-            <a class="indicator indicator-up" href="#top"><span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'></span><span class="indicator-arrow indicator-arrow-two" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'></span></a>
+            <a class="indicator indicator-up" href="#top" data-fancyscroll="data-fancyscroll"><span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'></span><span class="indicator-arrow indicator-arrow-two" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'></span></a>
           </div>
           <div class="col-lg-4 text-lg-left mt-4 mt-lg-0">
             <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-              Copyright &copy; 2018 hiroshi-skm.com</p>
+              Copyright &copy; 2019 hiroshi-skm.com</p>
           </div>
         </div>
       </div>
@@ -308,10 +297,8 @@
     <script src="assets/lib/loaders.css/loaders.css.js"></script>
     <script src="assets/js/stickyfill.min.js"></script>
     <script src="assets/lib/remodal/remodal.js"></script>
+    <script src="assets/lib/jtap/jquery.tap.js"></script>
     <script src="assets/js/rellax.min.js"></script>
-    <script src="assets/lib/owl.carousel/owl.carousel.js"></script>
-    <script src="assets/lib/lightbox2/js/lightbox.js"></script>
-    <script src="assets/js/progressbar.min.js"></script>
     <script src="assets/js/theme.js"></script>
 
   </body>

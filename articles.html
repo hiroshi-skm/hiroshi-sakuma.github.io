@@ -32,8 +32,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
     <link href="assets/lib/remodal/remodal.css" rel="stylesheet">
     <link href="assets/lib/remodal/remodal-default-theme.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
-    <link href="assets/lib/lightbox2/css/lightbox.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
 
     <meta name="google-site-verification" content="P9fGHxK_BGQWkK_IPlR-rO3WMIvp2O9jSynrTYjgpPY" />
@@ -48,10 +46,10 @@
     <!--===============================================-->
     <nav class="fancynavbar" data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-48},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}'
       data-zanim-trigger="scroll" data-exclusive="true">
-      <div class="fancynavbar-togglerbar bg-black">
+      <div class="fancynavbar-togglerbar" data-onscroll-fade-in="data-onscroll-fade-in">
         <a class="fancynavbar-brand" href="index.html">
-          <span class='fab fa-superpowers fs-3'></span>
-        </a>
+          <span class='fas fa-barcode fs-3'></span>
+          <!--<span class='logo-sparrow'>S</span>--></a>
         <div class="fancynavbar-toggler">
           <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}' data-zanim-trigger="scroll">
             <path id="path-top" d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"></path>
@@ -80,7 +78,7 @@
             <a class="fancynav-link" href="./articles.html"><span class="fancynav-link-content">ARTICLES</span></a>
           </li>
           <li class="fancynav-item">
-            <a class="fancynav-link" href="mailto:sakuma.hiroshi@is.sys.es.osaka-u.ac.jp"><span class="fancynav-link-content">CONTACT</span></a>
+            <a class="fancynav-link" href="./contact.html"><span class="fancynav-link-content">CONTACT</span></a>
           </li>
         </ul>
       </div>
@@ -94,7 +92,7 @@
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
-    <main class="main minh-100vh" id="top">
+    <main class="main min-vh-100" id="top">
 
 
       <!-- ============================================-->
@@ -116,13 +114,16 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="pt-8 pt-md-7 py-lg-5 py-xl-6 bg-white" id="portfolio">
+      <section class="py-0" id="top">
 
         <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-10 text-white text-center text-lg-left" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-              <div class="overflow-hidden">
-                <a class="text-dark" href="./index.html"><h1 class="display-3 fs-3" data-zanim-xs='{"delay":0.2}'>Hiroshi Sakuma<br/><span class="font-weight-light">Official Website</span></h1></a>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 bg-white py-6">
+              <div data-zanim-timeline='{"delay":0.4}' data-zanim-trigger="scroll">
+                <h1 class="font-weight-light text-uppercase fs-2 fs-sm-3 fs-lg-2 fs-xl-3">
+                  <a class="text-dark" href="./index.html"><span class="d-block overflow-hidden"><span class="d-inline-block" data-zanim-xs='{"delay":0.1}'><span class="display-4 fs-3 fs-sm-4 fs-lg-3 fs-xl-4 font-weight-black">Hiroshi Sakuma</span></span></span>
+                  <span class="d-block overflow-hidden"><span class="d-block mt-2" data-zanim-xs='{"delay":0.2}'>Official Website</span></span></a>
+                </h1>
               </div>
             </div>
           </div>
@@ -133,23 +134,22 @@
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
-
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="pt-7 py-lg-5 py-xl-6 bg-white border-top border-300" id="articles">
+      <section class="border-top border-300 pt-7 py-lg-5 py-xl-6 bg-white" id="articles">
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-8 overflow-hidden px-5">
-              <h1 class="display-4 fs-2 fs-sm-3 fs-md-3">ARTICLES</h1>
-              <p class="mt-4"><strong>2018.11.30</strong><br>佐久間洋司，<a class="text-dark" href="https://media.dglab.com/2018/11/30-ai_vr-01/" target="_blank">人工知能とバーチャルリアリティの接点【前編】</a>・<a class="text-dark" href="https://media.dglab.com/2018/12/01-ai_vr-02/" target="_blank">【後編】</a>，DG Lab Haus</p>
-              <p class="mt-4"><strong>2018.09.01</strong><br>佐久間洋司，<a class="text-dark" href="http://id.nii.ac.jp/1004/00009339/" target="_blank">学生フォーラム　稲見昌彦教授インタビュー「自在化身体，研究者になるということ，これからの情報処理」</a> 人工知能　33巻5号（2018年9月）</p>
-              <p class="mt-4"><strong>2018.05.01</strong><br>佐久間洋司，船橋力，<a class="text-dark" href="http://id.nii.ac.jp/1004/00009142/" target="_blank">グローバルアイ「人工知能分野における留学と官民協働の支援制度について」</a>，人工知能　33巻3号（2018年5月）</p>
-              <p class="mt-4"><strong>2018.04.15</strong><br>佐久間洋司，<a class="text-dark" href="https://www.ipsj.or.jp/magazine/9faeag0000005al5-att/5904peta.pdf" target="_blank">ぺた語義「情報処理分野における留学とインターンシップの重要性」</a>，情報処理　59巻4号（2018年4月）</p>
-              <p class="mt-4"><strong>2017.11.01</strong><br>佐久間洋司，<a class="text-dark" href="http://id.nii.ac.jp/1004/00008924/" target="_blank">学生フォーラム　銅谷賢治教授インタビュー「人工知能と脳科学：自分が何かやってみたときの最初の感動を忘れずに」</a>，人工知能　32巻6号（2017年11月）</p>
-              <p class="mt-4"><strong>2017.07.24</strong><br>佐久間洋司，<a class="text-dark" href="https://media.dglab.com/2017/07/24-interview-richard-01/" target="_blank">Vector Institute 研究所長・Richard Zemel教授インタビュー【前編】</a>・<a class="text-dark" href="https://media.dglab.com/2017/07/25-interview-richard-02/" target="_blank">【後編】</a>，DG Lab Haus</p>
-              <p class="mt-4"><strong>2017.07.01</strong><br>佐久間洋司，<a class="text-dark" href="http://id.nii.ac.jp/1004/00008754/" target="_blank">学生フォーラム　Richard Zemel 教授インタビュー「深層学習の今・トロント大学のこれまでとこれから」</a>，人工知能　32巻4号（2017年7月）</p>
-              <p class="mt-4"><strong>2017.03.01</strong><br>佐久間洋司，石黒浩，<a class="text-dark" href="http://id.nii.ac.jp/1004/00008578/" target="_blank">小特集「日本の AI 元気な若手の動き」人工知能研究会 / AIR</a>，人工知能　32巻2号（2017年3月）</p>
+            <div class="col-lg-8 overflow-hidden" data-zanim-xs='{"delay":0.4}' data-zanim-trigger="scroll">
+              <h1 class="text-sans-serif display-4 fs-2 fs-sm-3 fs-lg-2 fs-xl-3 mb-5">ARTICLES</h1>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.11.30</strong><br>佐久間洋司，<a class="text-dark" href="https://media.dglab.com/2018/11/30-ai_vr-01/" target="_blank">人工知能とバーチャルリアリティの接点【前編】</a>・<a class="text-dark" href="https://media.dglab.com/2018/12/01-ai_vr-02/" target="_blank">【後編】</a>，DG Lab Haus</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.09.01</strong><br>佐久間洋司，<a class="text-dark" href="http://id.nii.ac.jp/1004/00009339/" target="_blank">学生フォーラム　稲見昌彦教授インタビュー「自在化身体，研究者になるということ，これからの情報処理」</a> 人工知能　33巻5号（2018年9月）</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.05.01</strong><br>佐久間洋司，船橋力，<a class="text-dark" href="http://id.nii.ac.jp/1004/00009142/" target="_blank">グローバルアイ「人工知能分野における留学と官民協働の支援制度について」</a>，人工知能　33巻3号（2018年5月）</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.04.15</strong><br>佐久間洋司，<a class="text-dark" href="https://www.ipsj.or.jp/magazine/9faeag0000005al5-att/5904peta.pdf" target="_blank">ぺた語義「情報処理分野における留学とインターンシップの重要性」</a>，情報処理　59巻4号（2018年4月）</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2017.11.01</strong><br>佐久間洋司，<a class="text-dark" href="http://id.nii.ac.jp/1004/00008924/" target="_blank">学生フォーラム　銅谷賢治教授インタビュー「人工知能と脳科学：自分が何かやってみたときの最初の感動を忘れずに」</a>，人工知能　32巻6号（2017年11月）</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2017.07.24</strong><br>佐久間洋司，<a class="text-dark" href="https://media.dglab.com/2017/07/24-interview-richard-01/" target="_blank">Vector Institute 研究所長・Richard Zemel教授インタビュー【前編】</a>・<a class="text-dark" href="https://media.dglab.com/2017/07/25-interview-richard-02/" target="_blank">【後編】</a>，DG Lab Haus</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2017.07.01</strong><br>佐久間洋司，<a class="text-dark" href="http://id.nii.ac.jp/1004/00008754/" target="_blank">学生フォーラム　Richard Zemel 教授インタビュー「深層学習の今・トロント大学のこれまでとこれから」</a>，人工知能　32巻4号（2017年7月）</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2017.03.01</strong><br>佐久間洋司，石黒浩，<a class="text-dark" href="http://id.nii.ac.jp/1004/00008578/" target="_blank">小特集「日本の AI 元気な若手の動き」人工知能研究会 / AIR</a>，人工知能　32巻2号（2017年3月）</p>
             </div>
           </div>
         </div>
@@ -158,7 +158,6 @@
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
-
 
     </main>
     <!-- ===============================================-->
@@ -175,11 +174,11 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-4 order-lg-2">
-            <a class="indicator indicator-up" href="#top"><span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'></span><span class="indicator-arrow indicator-arrow-two" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'></span></a>
+            <a class="indicator indicator-up" href="#top" data-fancyscroll="data-fancyscroll"><span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'></span><span class="indicator-arrow indicator-arrow-two" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'></span></a>
           </div>
           <div class="col-lg-4 text-lg-left mt-4 mt-lg-0">
             <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-              Copyright &copy; 2018 hiroshi-skm.com</p>
+              Copyright &copy; 2019 hiroshi-skm.com</p>
           </div>
         </div>
       </div>
@@ -212,10 +211,8 @@
     <script src="assets/lib/loaders.css/loaders.css.js"></script>
     <script src="assets/js/stickyfill.min.js"></script>
     <script src="assets/lib/remodal/remodal.js"></script>
+    <script src="assets/lib/jtap/jquery.tap.js"></script>
     <script src="assets/js/rellax.min.js"></script>
-    <script src="assets/lib/owl.carousel/owl.carousel.js"></script>
-    <script src="assets/lib/lightbox2/js/lightbox.js"></script>
-    <script src="assets/js/progressbar.min.js"></script>
     <script src="assets/js/theme.js"></script>
 
   </body>

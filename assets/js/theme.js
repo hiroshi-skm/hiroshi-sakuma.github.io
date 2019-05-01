@@ -80,13 +80,19 @@ spUtils.$document.ready(function () {
 
   if ($navbar.length) {
     var windowHeight = spUtils.$window.height();
-    spUtils.$window.scroll(function () {
+
+    var handleAlpha = function handleAlpha() {
       var scrollTop = spUtils.$window.scrollTop();
       var alpha = scrollTop / windowHeight * 2;
       alpha >= 1 && (alpha = 1);
       $navbar.css({
         'background-color': "rgba(0, 0, 0, " + alpha + ")"
       });
+    };
+
+    handleAlpha();
+    spUtils.$window.scroll(function () {
+      return handleAlpha();
     }); // Top navigation background toggle on mobile
 
     $navbar.on('show.bs.collapse hide.bs.collapse', function (e) {
@@ -484,8 +490,45 @@ spUtils.$document.ready(function () {
     -----------------------------------------------*/
 
 
-    $(Selector.FANCYNAV_LINK).on('click', function (e) {
-      // Keeping the menu open on ctrl/cmd + click
+    var clickEvent = spDetector.isIOS ? 'click tap' : 'click';
+    $(Selector.FANCYNAV_LINK).on(clickEvent, function (e) {
+      // Fancyscroll in Fancynav
+      var $this = $(e.target);
+
+      function getAttributes($node) {
+        var attrs = [];
+        var attrsObj = {};
+        $.each($node[0].attributes, function (index, attribute) {
+          return attrs.push(attribute.name);
+        });
+        $.each($node[0].attributes, function (i, a) {
+          attrsObj[a.name] = a.value;
+        });
+        return {
+          attrs: attrs,
+          attrsObj: attrsObj
+        };
+      }
+
+      var fancyscroll = function fancyscroll(target, elem) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - (elem.data('offset') || 0)
+        }, 400, 'swing', function () {
+          var hash = elem.attr('href');
+          window.history.pushState ? window.history.pushState(null, null, hash) : window.location.hash = hash;
+        });
+        animateMenu();
+      };
+
+      if ($this.hasClass('fancynav-link') && getAttributes($this).attrs.includes('data-fancyscroll')) {
+        fancyscroll($("#" + getAttributes($this).attrsObj.href.split('#')[1]), $this);
+        return;
+      } else if ($this.parent().hasClass('fancynav-link') && getAttributes($this.parent()).attrs.includes('data-fancyscroll')) {
+        fancyscroll($("#" + getAttributes($this.parent()).attrsObj.href.split('#')[1]), $this.parent());
+        return;
+      } // Keeping the menu open on ctrl/cmd + click
+
+
       if (e.ctrlKey || e.metaKey) return;
       var $fancyLink = $(e.currentTarget);
       var fancyDropdownMenuTimeline = new TimelineMax().pause();
@@ -578,6 +621,139 @@ spUtils.$document.ready(function () {
       changeFancyNavBG();
       spUtils.$window.on('resize', changeFancyNavBG);
     }
+  }
+}); // /*-----------------------------------------------
+// |   On page scroll for #id targets
+// -----------------------------------------------*/
+// spUtils.$document.ready(($) => {
+//   $('a[data-fancyscroll]').click(function scrollTo(e) {
+//     // const $this = $(e.currentTarget);
+//     e.preventDefault();
+//     const $this = $(this);
+//     if (spUtils.location.pathname.replace(/^\//, '')
+// === this.pathname.replace(/^\//, '') && spUtils.location.hostname === this.hostname) {
+//       let target = $(this.hash);
+//       target = target.length ? target : $(`[name=${this.hash.slice(1)}]`);
+//       if (target.length) {
+//         $('html,body').animate({
+//           scrollTop: (target.offset().top - ($this.data('offset') || 0)),
+//         }, 400, 'swing', () => {
+//           const hash = $this.attr('href');
+//           window.history.pushState ?
+//             window.history.pushState(null, null, hash) : window.location.hash = hash;
+//         });
+//         return false;
+//       }
+//     }
+//     return true;
+//   });
+// });
+
+/*-----------------------------------------------
+|   On page scroll for #id targets
+-----------------------------------------------*/
+
+spUtils.$document.ready(function ($) {
+  $('a[data-fancyscroll]').click(function scrollTo(e) {
+    // const $this = $(e.currentTarget);
+    var $this = $(this);
+
+    if (spUtils.location.pathname === $this[0].pathname && spUtils.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && spUtils.location.hostname === this.hostname) {
+      e.preventDefault();
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - ($this.data('offset') || 0)
+        }, 400, 'swing', function () {
+          var hash = $this.attr('href');
+          window.history.pushState ? window.history.pushState(null, null, hash) : window.location.hash = hash;
+        });
+        return false;
+      }
+    }
+
+    return true;
+  });
+  var hash = window.location.hash;
+
+  if (hash && document.getElementById(hash.slice(1))) {
+    var $this = $(hash);
+    $('html, body').animate({
+      scrollTop: $this.offset().top - $("a[href='" + hash + "']").data('offset')
+    }, 400, 'swing', function () {
+      window.history.pushState ? window.history.pushState(null, null, hash) : window.location.hash = hash;
+    });
+  }
+});
+/*-----------------------------------------------
+|   Tabs
+-----------------------------------------------*/
+
+spUtils.$document.ready(function () {
+  var $fancyTabs = $('.fancy-tab');
+
+  if ($fancyTabs.length) {
+    var Selector = {
+      TAB_BAR: '.nav-bar',
+      TAB_BAR_ITEM: '.nav-bar-item',
+      TAB_CONTENTS: '.tab-contents'
+    };
+    var ClassName = {
+      ACTIVE: 'active',
+      TRANSITION_REVERSE: 'transition-reverse',
+      TAB_INDICATOR: 'tab-indicator'
+    };
+    /*-----------------------------------------------
+    |   Function for active tab indicator change
+    -----------------------------------------------*/
+
+    var updateIncicator = function updateIncicator($indicator, $tabs, $tabnavCurrentItem) {
+      var _$tabnavCurrentItem$p = $tabnavCurrentItem.position(),
+          left = _$tabnavCurrentItem$p.left;
+
+      var right = $tabs.children(Selector.TAB_BAR).outerWidth() - (left + $tabnavCurrentItem.outerWidth());
+      $indicator.css({
+        left: left,
+        right: right
+      });
+    };
+
+    $fancyTabs.each(function (index, value) {
+      var $tabs = $(value);
+      var $navBar = $tabs.children(Selector.TAB_BAR);
+      var $tabnavCurrentItem = $navBar.children(Selector.TAB_BAR_ITEM + "." + ClassName.ACTIVE);
+      $navBar.append("\n        <div class=" + ClassName.TAB_INDICATOR + "></div>\n      ");
+      var $indicator = $navBar.children("." + ClassName.TAB_INDICATOR);
+      var $preIndex = $tabnavCurrentItem.index();
+      updateIncicator($indicator, $tabs, $tabnavCurrentItem);
+      $navBar.children(Selector.TAB_BAR_ITEM).click(function (e) {
+        $tabnavCurrentItem = $(e.currentTarget);
+        var $currentIndex = $tabnavCurrentItem.index();
+        var $tabContent = $tabs.children(Selector.TAB_CONTENTS).children().eq($currentIndex);
+        $tabnavCurrentItem.siblings().removeClass(ClassName.ACTIVE);
+        $tabnavCurrentItem.addClass(ClassName.ACTIVE);
+        $tabContent.siblings().removeClass(ClassName.ACTIVE);
+        $tabContent.addClass(ClassName.ACTIVE);
+        /*-----------------------------------------------
+        |   Indicator Transition
+        -----------------------------------------------*/
+
+        updateIncicator($indicator, $tabs, $tabnavCurrentItem);
+
+        if ($currentIndex - $preIndex <= 0) {
+          $indicator.addClass(ClassName.TRANSITION_REVERSE);
+        } else {
+          $indicator.removeClass(ClassName.TRANSITION_REVERSE);
+        }
+
+        $preIndex = $currentIndex;
+      });
+      spUtils.$window.on('resize', function () {
+        updateIncicator($indicator, $tabs, $tabnavCurrentItem);
+      });
+    });
   }
 });
 /*-----------------------------------------------
@@ -2040,32 +2216,6 @@ spUtils.$document.ready(function () {
   }
 });
 /*-----------------------------------------------
-|   On page scroll for #id targets
------------------------------------------------*/
-
-spUtils.$document.ready(function ($) {
-  $('a[href*=\\#]:not([href=\\#])').click(function scrollTo() {
-    // const $this = $(e.currentTarget);
-    var $this = $(this);
-
-    if (spUtils.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && spUtils.location.hostname === this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - ($this.data('offset') || 0)
-        }, 400, 'swing', function () {
-          window.location.hash = $this.attr('href');
-        });
-        return false;
-      }
-    }
-
-    return true;
-  });
-});
-/*-----------------------------------------------
 |   Sementic UI
 -----------------------------------------------*/
 
@@ -2114,75 +2264,6 @@ spUtils.$document.ready(function () {
   if (stickyKit.length) {
     stickyKit.each(function (index, value) {
       $(value).stick_in_parent();
-    });
-  }
-});
-/*-----------------------------------------------
-|   Tabs
------------------------------------------------*/
-
-spUtils.$document.ready(function () {
-  var $fancyTabs = $('.fancy-tab');
-
-  if ($fancyTabs.length) {
-    var Selector = {
-      TAB_BAR: '.nav-bar',
-      TAB_BAR_ITEM: '.nav-bar-item',
-      TAB_CONTENTS: '.tab-contents'
-    };
-    var ClassName = {
-      ACTIVE: 'active',
-      TRANSITION_REVERSE: 'transition-reverse',
-      TAB_INDICATOR: 'tab-indicator'
-    };
-    /*-----------------------------------------------
-    |   Function for active tab indicator change
-    -----------------------------------------------*/
-
-    var updateIncicator = function updateIncicator($indicator, $tabs, $tabnavCurrentItem) {
-      var _$tabnavCurrentItem$p = $tabnavCurrentItem.position(),
-          left = _$tabnavCurrentItem$p.left;
-
-      var right = $tabs.children(Selector.TAB_BAR).outerWidth() - (left + $tabnavCurrentItem.outerWidth());
-      $indicator.css({
-        left: left,
-        right: right
-      });
-    };
-
-    $fancyTabs.each(function (index, value) {
-      var $tabs = $(value);
-      var $navBar = $tabs.children(Selector.TAB_BAR);
-      var $tabnavCurrentItem = $navBar.children(Selector.TAB_BAR_ITEM + "." + ClassName.ACTIVE);
-      $navBar.append("\n        <div class=" + ClassName.TAB_INDICATOR + "></div>\n      ");
-      var $indicator = $navBar.children("." + ClassName.TAB_INDICATOR);
-      var $preIndex = $tabnavCurrentItem.index();
-      updateIncicator($indicator, $tabs, $tabnavCurrentItem);
-      $navBar.children(Selector.TAB_BAR_ITEM).click(function (e) {
-        $tabnavCurrentItem = $(e.currentTarget);
-        var $currentIndex = $tabnavCurrentItem.index();
-        var $tabContent = $tabs.children(Selector.TAB_CONTENTS).children().eq($currentIndex);
-        $tabnavCurrentItem.siblings().removeClass(ClassName.ACTIVE);
-        $tabnavCurrentItem.addClass(ClassName.ACTIVE);
-        $tabContent.siblings().removeClass(ClassName.ACTIVE);
-        $tabContent.addClass(ClassName.ACTIVE);
-        /*-----------------------------------------------
-        |   Indicator Transition
-        -----------------------------------------------*/
-
-        updateIncicator($indicator, $tabs, $tabnavCurrentItem);
-
-        if ($currentIndex - $preIndex <= 0) {
-          $indicator.addClass(ClassName.TRANSITION_REVERSE);
-        } else {
-          $indicator.removeClass(ClassName.TRANSITION_REVERSE);
-        }
-
-        $preIndex = $currentIndex;
-      });
-      spUtils.$window.on('resize', function () {
-        updateIncicator($indicator, $tabs, $tabnavCurrentItem);
-      });
     });
   }
 });

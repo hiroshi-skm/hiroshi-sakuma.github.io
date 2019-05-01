@@ -32,8 +32,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
     <link href="assets/lib/remodal/remodal.css" rel="stylesheet">
     <link href="assets/lib/remodal/remodal-default-theme.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
-    <link href="assets/lib/lightbox2/css/lightbox.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
 
     <meta name="google-site-verification" content="P9fGHxK_BGQWkK_IPlR-rO3WMIvp2O9jSynrTYjgpPY" />
@@ -48,10 +46,10 @@
     <!--===============================================-->
     <nav class="fancynavbar" data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-48},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}'
       data-zanim-trigger="scroll" data-exclusive="true">
-      <div class="fancynavbar-togglerbar bg-black">
+      <div class="fancynavbar-togglerbar" data-onscroll-fade-in="data-onscroll-fade-in">
         <a class="fancynavbar-brand" href="index.html">
-          <span class='fab fa-superpowers fs-3'></span>
-        </a>
+          <span class='fas fa-barcode fs-3'></span>
+          <!--<span class='logo-sparrow'>S</span>--></a>
         <div class="fancynavbar-toggler">
           <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}' data-zanim-trigger="scroll">
             <path id="path-top" d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"></path>
@@ -80,7 +78,7 @@
             <a class="fancynav-link" href="./articles.html"><span class="fancynav-link-content">ARTICLES</span></a>
           </li>
           <li class="fancynav-item">
-            <a class="fancynav-link" href="mailto:sakuma.hiroshi@is.sys.es.osaka-u.ac.jp"><span class="fancynav-link-content">CONTACT</span></a>
+            <a class="fancynav-link" href="./contact.html"><span class="fancynav-link-content">CONTACT</span></a>
           </li>
         </ul>
       </div>
@@ -94,7 +92,7 @@
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
-    <main class="main minh-100vh" id="top">
+    <main class="main min-vh-100" id="top">
 
 
       <!-- ============================================-->
@@ -116,13 +114,16 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="pt-8 pt-md-7 py-lg-5 py-xl-6 bg-white" id="portfolio">
+      <section class="py-0" id="top">
 
         <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-10 text-white text-center text-lg-left" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-              <div class="overflow-hidden">
-                <a class="text-dark" href="./index.html"><h1 class="display-3 fs-3" data-zanim-xs='{"delay":0.2}'>Hiroshi Sakuma<br/><span class="font-weight-light">Official Website</span></h1></a>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 bg-white py-6">
+              <div data-zanim-timeline='{"delay":0.4}' data-zanim-trigger="scroll">
+                <h1 class="font-weight-light text-uppercase fs-2 fs-sm-3 fs-lg-2 fs-xl-3">
+                  <a class="text-dark" href="./index.html"><span class="d-block overflow-hidden"><span class="d-inline-block" data-zanim-xs='{"delay":0.1}'><span class="display-4 fs-3 fs-sm-4 fs-lg-3 fs-xl-4 font-weight-black">Hiroshi Sakuma</span></span></span>
+                  <span class="d-block overflow-hidden"><span class="d-block mt-2" data-zanim-xs='{"delay":0.2}'>Official Website</span></span></a>
+                </h1>
               </div>
             </div>
           </div>
@@ -133,32 +134,31 @@
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
-
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="pt-7 py-lg-5 py-xl-6 bg-white border-top border-300" id="media">
+      <section class="border-top border-300 pt-7 py-lg-5 py-xl-6 bg-white" id="articles">
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-8 overflow-hidden px-5">
-              <h1 class="display-4 fs-2 fs-sm-3 fs-md-3">MEDIA</h1>
-              <p class="mt-4"><strong>2019.04.27</strong><br><a class="text-dark" href="https://www.nikkei.com/article/DGKKZO44272640W9A420C1LKB000/" target="_blank">「起業しやすい環境整備を 人工知能研究会代表 佐久間洋司氏（23）」</a>日本経済新聞</p>
-              <p class="mt-4"><strong>2019.04.19</strong><br><a class="text-dark" href="https://news.line.me/issue/oa-asahikids/6d97d197e1cb" target="_blank">「科学で変える、私たちの意識 大阪大学基礎工学部 佐久間洋司」</a>異能日記2，朝日小学生新聞</p>
-              <p class="mt-4"><strong>2019.03.19</strong><br><a class="text-dark" href="https://www.nikkei.com/article/DGXMZO42663400Z10C19A3LKA000/" target="_blank">「万博へイノベーション創出 大商が実証実験や研究会」</a>日本経済新聞</p>
-              <p class="mt-4"><strong>2019.02.24</strong><br><a class="text-dark" href="https://oulife.jp/post-15696" target="_blank">「【はなお×佐久間洋司】阪大の異色のふたりが語ります！大人気YouTuberと若きAI研究者対談」</a>OULife</p>
-              <p class="mt-4"><strong>2019.01.28</strong><br><a class="text-dark" href="https://www.asahi.com/dialog/articles/12102257" target="_blank">「『トビタテ！留学JAPAN』テック系カンファレンスで見た 70億のバーチャル世界がもたらす幸福な未来の可能性」</a>朝日新聞DIALOG</p>
-              <p class="mt-4"><strong>2019.01.23</strong><br><a class="text-dark" href="https://gendai.ismedia.jp/articles/-/59391" target="_blank">「『AIで争いのない世界をつくる』ある大学生の壮大な試み」</a>現代ビジネス</p>
-              <p class="mt-4"><strong>2019.01.12</strong><br>JFN「Future－lists」出演</p>
-              <p class="mt-4"><strong>2018.11.17</strong><br>NHK<a class="text-dark" href="http://www4.nhk.or.jp/ten5chan/" target="_blank">「テンゴちゃん～土曜深夜の辺境レボリューション～」</a>出演</p>
-              <p class="mt-4"><strong>2018.06.27</strong><br><a class="text-dark" href="http://college.nikkei.co.jp/article/113935510.html" target="_blank">「トビタった！私たち(16) カナダで見つけた人工知能と私たちの未来（上）</a>・<a class="text-dark" href="http://college.nikkei.co.jp/article/114213414.html" target="_blank">（中）</a>・<a class="text-dark" href="http://college.nikkei.co.jp/article/114222716.html" target="_blank">（下）」</a> College Cafe by NIKKEI</p>
-              <p class="mt-4"><strong>2018.04.02</strong><br><a class="text-dark" href="https://www.nikkei.com/article/DGKKZO28788070Q8A330C1TCL000/" target="_blank">「AIの未来、関西の学生らと考える」</a> 日本経済新聞</p>
-              <p class="mt-4"><strong>2018.03.15</strong><br><a class="text-dark" href="https://mycampus.jp/2018/03/15/sakuma-hiroshi/" target="_blank">「人の意識をアップデートしたいー。人工知能の最前線で学ぶ学生が目指す世界。（大阪大学 佐久間 洋司）」</a> マイナビ MY FUTURE CAMPUS</p>
-              <p class="mt-4"><strong>2018.03.15</strong><br><a class="text-dark" href="https://mainichi.jp/articles/20180315/ddm/013/040/023000c" target="_blank">「ＡＩ活用し人間を優しく　人工知能研究会／ＡＩＲ（エアー）代表・佐久間洋司さん（２１）」</a> 若者フリーゾーン，毎日新聞</p>
-              <p class="mt-4"><strong>2018.03.13</strong><br><a class="text-dark" href="http://www.co-media.jp/article/23032" target="_blank">「人工知能で争いのない世界の実現に挑む。日本最大級のAIコミュニティを牽引する現役大学生研究者、佐久間洋司さんインタビュー」</a> co-media</p>
-              <p class="mt-4"><strong>2017.11.27</strong><br><a class="text-dark" href="https://lab-on.jp/article/90" target="_blank">「機械は人を優しくできるか？人工知能研究会 / AIR 代表・佐久間洋司さんインタビュー」</a> Lab-On（ラボオン）</p>
-              <p class="mt-4"><strong>2017.11.14</strong><br><a class="text-dark" href="https://s3-ap-northeast-1.amazonaws.com/mext/2017/11/report20171114.pdf" target="_blank">「優秀賞　人工知能をめぐる冒険；深層学習の最先端を学ぶ」</a> トビタテ！留学JAPAN 日本代表プログラム 第3回 留学成果報告会開催レポート，トビタテ！留学JAPAN</p>
-              <p class="mt-4"><strong>2017.11.14</strong><br><a class="text-dark" href="https://tobitate.jasso.go.jp/zukan/detail-470" target="_blank">「人工知能をめぐる冒険」</a> 留学大図鑑，トビタテ！留学JAPAN</p>
-              <p class="mt-4"><strong>2017.09.07</strong><br><a class="text-dark" href="http://www.kiis.or.jp/research/e-Kansai/e-Kansai2017.pdf" target="_blank">先進企業・有識者インタビュー「第一線の研究者が参加するコミュニティで、若手研究者は学び育つ。佐久間洋司氏（大阪大学大学院基礎工学研究科/人工知能研究会 AIR）」</a> e-Kansaiレポート 2017 〜AI・IoT・ビッグデータがもたらすビジネス変革〜，一般財団法人関西情報センター</p>
+            <div class="col-lg-8 overflow-hidden" data-zanim-xs='{"delay":0.4}' data-zanim-trigger="scroll">
+              <h1 class="text-sans-serif display-4 fs-2 fs-sm-3 fs-lg-2 fs-xl-3 mb-5">MEDIA</h1>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.04.27</strong><br><a class="text-dark" href="https://www.nikkei.com/article/DGKKZO44272640W9A420C1LKB000/" target="_blank">「起業しやすい環境整備を 人工知能研究会代表 佐久間洋司氏（23）」</a>日本経済新聞</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.04.19</strong><br><a class="text-dark" href="https://news.line.me/issue/oa-asahikids/6d97d197e1cb" target="_blank">「科学で変える、私たちの意識 大阪大学基礎工学部 佐久間洋司」</a>異能日記2，朝日小学生新聞</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.03.19</strong><br><a class="text-dark" href="https://www.nikkei.com/article/DGXMZO42663400Z10C19A3LKA000/" target="_blank">「万博へイノベーション創出 大商が実証実験や研究会」</a>日本経済新聞</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.02.24</strong><br><a class="text-dark" href="https://oulife.jp/post-15696" target="_blank">「【はなお×佐久間洋司】阪大の異色のふたりが語ります！大人気YouTuberと若きAI研究者対談」</a>OULife</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.01.28</strong><br><a class="text-dark" href="https://www.asahi.com/dialog/articles/12102257" target="_blank">「『トビタテ！留学JAPAN』テック系カンファレンスで見た 70億のバーチャル世界がもたらす幸福な未来の可能性」</a>朝日新聞DIALOG</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.01.23</strong><br><a class="text-dark" href="https://gendai.ismedia.jp/articles/-/59391" target="_blank">「『AIで争いのない世界をつくる』ある大学生の壮大な試み」</a>現代ビジネス</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2019.01.12</strong><br>JFN「Future－lists」出演</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.11.17</strong><br>NHK<a class="text-dark" href="http://www4.nhk.or.jp/ten5chan/" target="_blank">「テンゴちゃん～土曜深夜の辺境レボリューション～」</a>出演</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.06.27</strong><br><a class="text-dark" href="http://college.nikkei.co.jp/article/113935510.html" target="_blank">「トビタった！私たち(16) カナダで見つけた人工知能と私たちの未来（上）</a>・<a class="text-dark" href="http://college.nikkei.co.jp/article/114213414.html" target="_blank">（中）</a>・<a class="text-dark" href="http://college.nikkei.co.jp/article/114222716.html" target="_blank">（下）」</a> College Cafe by NIKKEI</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.04.02</strong><br><a class="text-dark" href="https://www.nikkei.com/article/DGKKZO28788070Q8A330C1TCL000/" target="_blank">「AIの未来、関西の学生らと考える」</a> 日本経済新聞</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.03.15</strong><br><a class="text-dark" href="https://mycampus.jp/2018/03/15/sakuma-hiroshi/" target="_blank">「人の意識をアップデートしたいー。人工知能の最前線で学ぶ学生が目指す世界。（大阪大学 佐久間 洋司）」</a> マイナビ MY FUTURE CAMPUS</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.03.15</strong><br><a class="text-dark" href="https://mainichi.jp/articles/20180315/ddm/013/040/023000c" target="_blank">「ＡＩ活用し人間を優しく　人工知能研究会／ＡＩＲ（エアー）代表・佐久間洋司さん（２１）」</a> 若者フリーゾーン，毎日新聞</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2018.03.13</strong><br><a class="text-dark" href="http://www.co-media.jp/article/23032" target="_blank">「人工知能で争いのない世界の実現に挑む。日本最大級のAIコミュニティを牽引する現役大学生研究者、佐久間洋司さんインタビュー」</a> co-media</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2017.11.27</strong><br><a class="text-dark" href="https://lab-on.jp/article/90" target="_blank">「機械は人を優しくできるか？人工知能研究会 / AIR 代表・佐久間洋司さんインタビュー」</a> Lab-On（ラボオン）</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2017.11.14</strong><br><a class="text-dark" href="https://s3-ap-northeast-1.amazonaws.com/mext/2017/11/report20171114.pdf" target="_blank">「優秀賞　人工知能をめぐる冒険；深層学習の最先端を学ぶ」</a> トビタテ！留学JAPAN 日本代表プログラム 第3回 留学成果報告会開催レポート，トビタテ！留学JAPAN</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2017.11.14</strong><br><a class="text-dark" href="https://tobitate.jasso.go.jp/zukan/detail-470" target="_blank">「人工知能をめぐる冒険」</a> 留学大図鑑，トビタテ！留学JAPAN</p>
+              <p class="text-sans-serif fs-0 fs-sm-1 fs-lg-0 fs-xl-1 mt-4"><strong>2017.09.07</strong><br><a class="text-dark" href="http://www.kiis.or.jp/research/e-Kansai/e-Kansai2017.pdf" target="_blank">先進企業・有識者インタビュー「第一線の研究者が参加するコミュニティで、若手研究者は学び育つ。佐久間洋司氏（大阪大学大学院基礎工学研究科/人工知能研究会 AIR）」</a> e-Kansaiレポート 2017 〜AI・IoT・ビッグデータがもたらすビジネス変革〜，一般財団法人関西情報センター</p>
             </div>
           </div>
         </div>
@@ -167,7 +167,6 @@
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
-
 
     </main>
     <!-- ===============================================-->
@@ -184,11 +183,11 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-4 order-lg-2">
-            <a class="indicator indicator-up" href="#top"><span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'></span><span class="indicator-arrow indicator-arrow-two" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'></span></a>
+            <a class="indicator indicator-up" href="#top" data-fancyscroll="data-fancyscroll"><span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'></span><span class="indicator-arrow indicator-arrow-two" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'></span></a>
           </div>
           <div class="col-lg-4 text-lg-left mt-4 mt-lg-0">
             <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-              Copyright &copy; 2018 hiroshi-skm.com</p>
+              Copyright &copy; 2019 hiroshi-skm.com</p>
           </div>
         </div>
       </div>
@@ -221,10 +220,8 @@
     <script src="assets/lib/loaders.css/loaders.css.js"></script>
     <script src="assets/js/stickyfill.min.js"></script>
     <script src="assets/lib/remodal/remodal.js"></script>
+    <script src="assets/lib/jtap/jquery.tap.js"></script>
     <script src="assets/js/rellax.min.js"></script>
-    <script src="assets/lib/owl.carousel/owl.carousel.js"></script>
-    <script src="assets/lib/lightbox2/js/lightbox.js"></script>
-    <script src="assets/js/progressbar.min.js"></script>
     <script src="assets/js/theme.js"></script>
 
   </body>

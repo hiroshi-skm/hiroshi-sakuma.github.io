@@ -2,7 +2,7 @@
  * 
  *   typed.js - A JavaScript Typing Animation Library
  *   Author: Matt Boldt <me@mattboldt.com>
- *   Version: v2.0.9
+ *   Version: v2.0.7
  *   Url: https://github.com/mattboldt/typed.js
  *   License(s): MIT
  * 
@@ -741,21 +741,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'appendAnimationCss',
 	    value: function appendAnimationCss(self) {
-	      var cssDataName = 'data-typed-js-css';
 	      if (!self.autoInsertCss) {
 	        return;
 	      }
-	      if (!self.showCursor && !self.fadeOut) {
-	        return;
-	      }
-	      if (document.querySelector('[' + cssDataName + ']')) {
+	      if (!self.showCursor || !self.fadeOut) {
 	        return;
 	      }
 	
 	      var css = document.createElement('style');
 	      css.type = 'text/css';
-	      css.setAttribute(cssDataName, true);
-	
 	      var innerCss = '';
 	      if (self.showCursor) {
 	        innerCss += '\n        .typed-cursor{\n          opacity: 1;\n        }\n        .typed-cursor.typed-cursor--blink{\n          animation: typedjsBlink 0.7s infinite;\n          -webkit-animation: typedjsBlink 0.7s infinite;\n                  animation: typedjsBlink 0.7s infinite;\n        }\n        @keyframes typedjsBlink{\n          50% { opacity: 0.0; }\n        }\n        @-webkit-keyframes typedjsBlink{\n          0% { opacity: 1; }\n          50% { opacity: 0.0; }\n          100% { opacity: 1; }\n        }\n      ';
