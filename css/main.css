@@ -302,20 +302,23 @@ nav {
   padding-top: 150px;
   margin-bottom: 80px; }
   .header h1 {
-    width: 100%;
+    width: 40%;
     margin: 0px auto;
     -webkit-animation-duration: 8s;
     animation-duration: 8s;
     -webkit-animation-delay: 0.5s; }
     @media screen and (max-width: 1200px) {
       .header h1 {
-        width: 100%; } }
+        width: 50%; } }
     @media screen and (max-width: 836px) {
       .header h1 {
-        width: 100%; } }
+        width: 65%; } }
     @media screen and (max-width: 745px) {
       .header h1 {
-        width: 100%; } }
+        width: 85%; } }
+  .header h1 img {
+    object-fit:cover;
+  }
   .header .work-line {
     -webkit-animation-delay: 1s; }
   .header .vertcial-line {
