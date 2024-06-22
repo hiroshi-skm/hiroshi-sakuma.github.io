@@ -242,6 +242,15 @@ p {
   letter-spacing: 0.5px;
   line-height: 1.6; }
 
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc { display: block !important; }
+.sp { display: none !important; }
+ 
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 750px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+}
 /*
 
 3. Header / Nav and intro text content
@@ -302,12 +311,12 @@ nav {
   padding-top: 150px;
   margin-bottom: 80px; }
   .header h1 {
-    width: 40%;
+    /* width: 40%; */
     margin: 0px auto;
     -webkit-animation-duration: 8s;
     animation-duration: 8s;
     -webkit-animation-delay: 0.5s; }
-    @media screen and (max-width: 1200px) {
+    /* @media screen and (max-width: 1200px) {
       .header h1 {
         width: 50%; } }
     @media screen and (max-width: 836px) {
@@ -315,7 +324,7 @@ nav {
         width: 65%; } }
     @media screen and (max-width: 745px) {
       .header h1 {
-        width: 85%; } }
+        width: 85%; } } */
   .header h1 img {
     object-fit:cover;
   }
